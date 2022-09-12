@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20220912 21:31:11.685" rpa="false" schemaversion="3">
+<suite id="s1" name="DataDrivenUsingExcel" source="C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\DataDrivenUsingExcel.robot">
+<test id="s1-t1" name="LoginTestWithExcelSheet using" line="13">
+<kw name="Valid Login">
+<arg>admin@yourstore.com</arg>
+<arg>admin</arg>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220912 21:31:12.672" endtime="20220912 21:31:12.672"/>
+</kw>
+<kw name="Open My Browser" library="LoginKeywords">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220912 21:31:12.672" level="INFO">Opening browser 'ff' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<msg timestamp="20220912 21:31:12.672" level="INFO">Firefox driver log is always forced to to: C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\geckodriver-15.log</msg>
+<status status="PASS" starttime="20220912 21:31:12.672" endtime="20220912 21:31:23.102"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220912 21:31:23.102" endtime="20220912 21:31:25.130"/>
+</kw>
+<status status="PASS" starttime="20220912 21:31:12.672" endtime="20220912 21:31:25.130"/>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginUserName}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220912 21:31:25.130" level="INFO">Typing text 'admin@yourstore.com' into text field 'xpath://input[@id='Email']'.</msg>
+<status status="PASS" starttime="20220912 21:31:25.130" endtime="20220912 21:31:31.247"/>
+</kw>
+<status status="PASS" starttime="20220912 21:31:25.130" endtime="20220912 21:31:31.247"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220912 21:31:31.247" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='Password']'.</msg>
+<status status="PASS" starttime="20220912 21:31:31.247" endtime="20220912 21:31:37.364"/>
+</kw>
+<status status="PASS" starttime="20220912 21:31:31.247" endtime="20220912 21:31:37.364"/>
+</kw>
+<kw name="Click SignIn" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220912 21:31:37.364" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220912 21:31:37.364" endtime="20220912 21:32:08.378"/>
+</kw>
+<status status="PASS" starttime="20220912 21:31:37.364" endtime="20220912 21:32:08.378"/>
+</kw>
+<kw name="Verify Succesfull login" library="LoginKeywords">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Dashboard / nopCommerce administration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220912 21:32:10.391" level="INFO">Page title is 'Dashboard / nopCommerce administration'.</msg>
+<status status="PASS" starttime="20220912 21:32:08.378" endtime="20220912 21:32:10.391"/>
+</kw>
+<status status="PASS" starttime="20220912 21:32:08.378" endtime="20220912 21:32:10.391"/>
+</kw>
+<kw name="Close My Browser" library="LoginKeywords">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220912 21:32:10.391" endtime="20220912 21:32:13.052"/>
+</kw>
+<status status="PASS" starttime="20220912 21:32:10.391" endtime="20220912 21:32:13.052"/>
+</kw>
+<status status="PASS" starttime="20220912 21:31:12.672" endtime="20220912 21:32:13.052"/>
+</kw>
+<status status="PASS" starttime="20220912 21:31:12.672" endtime="20220912 21:32:13.052"/>
+</test>
+<status status="PASS" starttime="20220912 21:31:11.685" endtime="20220912 21:32:13.068"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="DataDrivenUsingExcel">DataDrivenUsingExcel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
