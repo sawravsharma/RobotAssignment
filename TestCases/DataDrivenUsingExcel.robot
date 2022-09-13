@@ -21,5 +21,7 @@ Valid Login
     Enter Password  ${password}
     Click SignIn
     Verify Succesfull login
+    Capture Page Screenshot    ScreenShots/AfterLogin.png
+    Click Element    //a[contains(text(),'Logout')]
     Close My Browser
 
