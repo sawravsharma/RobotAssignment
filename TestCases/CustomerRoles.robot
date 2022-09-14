@@ -2,7 +2,8 @@
 Library    SeleniumLibrary
 Resource    ../Resources/AddCustomersKeywords.robot
 Resource    ../Resources/LoginKeywords.robot
-Variables    ../PageObjects/GeneratingRandomData.py
+Resource    ../Resources/DeleteKeywords.robot
+Resource    ../TestCases/AddCustomers.robot
 
 *** Variables ***
 #${Browser}    headlessfirefox
@@ -10,29 +11,13 @@ ${Browser}    ff
 ${url}    https://admin-demo.nopcommerce.com/
 
 *** Test Cases ***
-Adding New User
-    [Documentation]    This Test case is adding the user
+Customer Role
+    [Documentation]    This Test case is giving the role to the added user
     Valid Login    admin@yourstore.com    admin
-    Click Element    xpath://a[@href='#']//p[contains(text(),'Customers')]
-    Click Element    xpath://a[@href='/Admin/Customer/List']//p[contains(text(),'Customers')]
-    Click Element    xpath://a[@class='btn btn-primary']
-    Enter UserEmail    ${EMAIL}
-    Log To Console    ${EMAIL}
-    Enter NewUserPassword    ${PASSWORD}
-    Log To Console    ${PASSWORD}
-    Enter UserFirstName    ${FIRST_NAME}
-    Log To Console    ${FIRST_NAME}
-    Enter UserLastName    ${LAST_NAME}
-    Log To Console    ${LAST_NAME}
-    #Select Radio Button    Gender    Male
-    Enter UserDOB    01/01/2022
-    #Select From List By Label    SelectedCustomerRoleIds_label    Registered
-    Click Button    xpath://button[@name='save']
-    Verify Succesfully User Created
-    Capture Page Screenshot    ScreenShots/AddedUser.png
-    Click Element    //a[contains(text(),'Logout')]
-    Close All Browsers
-
+    Adding New User
+    Click Element    ${btn_customers}
+    Click Element    ${btnCustomerRoles}
+    
 *** Keywords ***
 Valid Login
     Set Selenium Speed    2
@@ -41,3 +26,16 @@ Valid Login
     Enter UserName  ${username}
     Enter Password  ${password}
     Click SignIn
+
+Adding New User
+    Valid Login    admin@yourstore.com    admin
+    Click Element    xpath://a[@href='#']//p[contains(text(),'Customers')]
+    Click Element    xpath://a[@href='/Admin/Customer/List']//p[contains(text(),'Customers')]
+    Click Element    xpath://a[@class='btn btn-primary']
+    Enter UserEmail    ${EMAIL}
+    Enter NewUserPassword    ${PASSWORD}
+    Enter UserFirstName    ${FIRST_NAME}
+    Enter UserLastName    ${LAST_NAME}
+    Enter UserDOB    01/01/2022
+    Click Button    xpath://button[@name='save']
+    Verify Succesfully User Created

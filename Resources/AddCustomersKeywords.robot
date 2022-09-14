@@ -1,9 +1,9 @@
 *** Settings ***
 Library  SeleniumLibrary
 Variables  ../PageObjects/Locators.py
+Variables  ../PageObjects/GeneratingRandomData.py
 
 *** Keywords ***
-
 Open My Browser
     [Arguments]    ${url}    ${Browser}
     open browser    ${url}    ${Browser}

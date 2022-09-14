@@ -3,6 +3,7 @@ Library    SeleniumLibrary
 Resource    ../Resources/AddCustomersKeywords.robot
 Resource    ../Resources/LoginKeywords.robot
 Resource    ../Resources/DeleteKeywords.robot
+Resource    ../TestCases/AddCustomers.robot
 
 *** Variables ***
 #${Browser}    headlessfirefox
@@ -11,9 +12,10 @@ ${url}    https://admin-demo.nopcommerce.com/
 
 *** Test Cases ***
 Delete the user
+    [Documentation]    This Test case is deleting the added user
     Valid Login    admin@yourstore.com    admin
     Adding New User
-    Enter EmailOfUserWhomeYouHaveToDelete    saurav12@gmail.com
+    Enter EmailOfUserWhomeYouHaveToDelete    ${EMAIL}
     Click SearchButton
     Click EditButton
     Click DeleteButton
@@ -33,15 +35,14 @@ Valid Login
     Click SignIn
 
 Adding New User
-    #Set Selenium Speed    2
     Valid Login    admin@yourstore.com    admin
     Click Element    xpath://a[@href='#']//p[contains(text(),'Customers')]
     Click Element    xpath://a[@href='/Admin/Customer/List']//p[contains(text(),'Customers')]
     Click Element    xpath://a[@class='btn btn-primary']
-    Enter UserEmail    saurav1234@gmail.com
-    Enter NewUserPassword    saurav125
-    Enter UserFirstName    Saurav
-    Enter UserLastName    Sharma
+    Enter UserEmail    ${EMAIL}
+    Enter NewUserPassword    ${PASSWORD}
+    Enter UserFirstName    ${FIRST_NAME}
+    Enter UserLastName    ${LAST_NAME}
     Enter UserDOB    01/01/2022
     Click Button    xpath://button[@name='save']
     Verify Succesfully User Created
