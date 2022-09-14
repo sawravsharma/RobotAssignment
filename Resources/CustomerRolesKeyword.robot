@@ -1,20 +1,30 @@
 **** settings ***
 Library    SeleniumLibrary
 Variables    ../PageObjects/Locators.py
-Variables    ../TestData/Data.py
+Variables    ../PageObjects/Data.py
 
 *** Keywords ***
+Open My Browser
+    [Arguments]    ${url}    ${Browser}
+    open browser    ${url}    ${Browser}
+    Maximize Browser Window
 
-Add Customer Role
-    Set Selenium Speed    3
-    Click Element    ${btn_customers}
-    Click Element    ${btn_customerrole}
-    Click Element    ${btn_addNew}
-    Input Text    ${txt_name}    ${name}
-    Select Checkbox  ${checkboxActive}
+Click Customers
+    Click Element    ${btnCustomers}
+Click Customers Role
+    Click Element    ${btnCustomerRoles}
+Click On Create Button In Customer Roles
+    Click Element    ${createButtonCustomerRoles}
+Enter User Name In Customer Roles
+    Input Text    ${txtName}    ${FIRST_NAME}
+    Log To Console    ${FIRST_NAME}
+Select Checkbox Exempt Tax
     Select Checkbox    ${checkboxTax}
-    Input Text    ${txtSystemName}    "for testing purpose only"
-
-Saving and verifying Customer role added or note
-    Click Element    ${btn_save}
+Click On Choose Product Button
+    Click Button   ${btnChooseProduct}
+Click On Select button
+    Click Button    ${selectProduct}
+Click On Save Button In Customer Roles
+    Click Button    ${saveButtonInCustomerRoles}
+Asserting The Changes
     Page Should Contain    The new customer role has been added successfully.

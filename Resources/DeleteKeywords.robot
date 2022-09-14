@@ -17,10 +17,10 @@ Click SearchButton
     click button    ${searchButton}
 
 Click EditButton
-    click button    ${editButton}
+    Click Link    ${editButton}
 
 Click DeleteButton
-    click button    ${deleteButton}
+    Click Element    ${deleteButton}
 
 Verify Succesfully User Deleted
     Page Should Contain    The customer has been deleted successfully.

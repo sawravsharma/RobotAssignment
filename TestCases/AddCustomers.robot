@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Resource    ../Resources/AddCustomersKeywords.robot
 Resource    ../Resources/LoginKeywords.robot
-Variables    ../PageObjects/GeneratingRandomData.py
+Variables  ../PageObjects/Data.py
 
 *** Variables ***
 #${Browser}    headlessfirefox
@@ -12,10 +12,10 @@ ${url}    https://admin-demo.nopcommerce.com/
 *** Test Cases ***
 Adding New User
     [Documentation]    This Test case is adding the user
-    Valid Login    admin@yourstore.com    admin
-    Click Element    xpath://a[@href='#']//p[contains(text(),'Customers')]
-    Click Element    xpath://a[@href='/Admin/Customer/List']//p[contains(text(),'Customers')]
-    Click Element    xpath://a[@class='btn btn-primary']
+    Valid Login    ${userEmailLogin}    ${userPasswordLogin}
+    Click Element    ${btnCustomers}
+    Click Element    ${btnCustomers1}
+    Click Element    ${btnAddNew}
     Enter UserEmail    ${EMAIL}
     Log To Console    ${EMAIL}
     Enter NewUserPassword    ${PASSWORD}
@@ -24,13 +24,11 @@ Adding New User
     Log To Console    ${FIRST_NAME}
     Enter UserLastName    ${LAST_NAME}
     Log To Console    ${LAST_NAME}
-    #Select Radio Button    Gender    Male
-    Enter UserDOB    01/01/2022
-    #Select From List By Label    SelectedCustomerRoleIds_label    Registered
-    Click Button    xpath://button[@name='save']
+    Enter UserDOB    ${DATE}
+    Click Button    ${saveButton}
     Verify Succesfully User Created
     Capture Page Screenshot    ScreenShots/AddedUser.png
-    Click Element    //a[contains(text(),'Logout')]
+    Click Element    ${logoutButton}
     Close All Browsers
 
 *** Keywords ***

@@ -1,7 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 Variables  ../PageObjects/Locators.py
-Variables  ../PageObjects/GeneratingRandomData.py
+Variables  ../PageObjects/Data.py
 
 *** Keywords ***
 Open My Browser
