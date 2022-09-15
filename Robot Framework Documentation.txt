@@ -1,0 +1,45 @@
+1) Robot Framework is a generic text automation framework for acceptance testing.
+2) Acceptance test driven development.
+3) It uitlizes the keyword-driven testing approach.
+4) Provides test libraries implemented either with Python or Java, and user can create new higher-level keywords
+   from existing ones using the same syntax that is used for creating test cases.
+
+The test cases in Robot Framework are based on keywords written in tabular format, which makes it clear and readable,
+and conveys the right information about the intention of the test case. For example, to open browser, the keyword
+used is “Open Browser”.
+
+ADVANTAGES
+The test cases in Robot Framework are based on keywords written in tabular format, which makes it clear and readable,
+and conveys the right information about the intention of the test case. For example, to open browser, the keyword
+used is “Open Browser”.
+Create logs and take screenshots itself
+
+
+TO SETUP ROBOT FRAMEWORK
+Install Python
+Install PyCharm IDE
+Then in CMD
+pip install selenium
+pip install robot-framework
+pip install robot-framework-seleniumlibrary
+pip install robotframework-datadriver
+
+ROBOT FRAMEWORK FEATURES 	
+1) Tabular format for test cases
+2) Keywords
+3) Variables
+4) Test Case Tagging
+
+
+
+DATA DRIVEN TESTCASES
+'install robotframework-datadriver' in the project interpreter section
+
+Robot framework supports keyword driven style test cases and data driven style. Data driven works with high-level
+keyword used as a template to the test suite and the test cases are used to share data with the high-level keyword
+defined in the template. It makes the work very easy for testing UI with different inputs.
+
+DIFFERENCE BETWEEN ROBOT FRAMEWORK AND SELENIUM
+Robot is a test framework that makes use of test libraries (standard & external) to execute tests, whereas Selenium
+is only a WebDriver/library that requires the support of test automation runners in order to perform test execution.
+

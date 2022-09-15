@@ -24,6 +24,7 @@ Adding New User
     Log To Console    ${FIRST_NAME}
     Enter UserLastName    ${LAST_NAME}
     Log To Console    ${LAST_NAME}
+    Select Radio Button    Gender    M 
     Enter UserDOB    ${DATE}
     Click Button    ${saveButton}
     Verify Succesfully User Created
