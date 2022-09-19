@@ -11,7 +11,7 @@ Resource    ../TestCases/AddCustomers.robot
 *** Variables ***
 ${textPresent}    No data available in table
 #${Browser}    headlessfirefox
-${SearchingUser}    brenda_lindgren@nopCommerce.com
+${SearchingUser}    ${EMAIL}
 ${Browser}    ff
 ${url}    https://admin-demo.nopcommerce.com/
 
