@@ -9,10 +9,31 @@ and conveys the right information about the intention of the test case. For exam
 used is “Open Browser”.
 
 ADVANTAGES
+Robot Framework scripts are hard to maintain.​
+
+Robot Framework HTML reports are difficult to customize.​
+
+Robot Framework does not support parallel test execution.​
+
+Some Robot Framework errors are difficult to debug.​
+
+Robot Framework has strict indentation rules.
+
 The test cases in Robot Framework are based on keywords written in tabular format, which makes it clear and readable,
 and conveys the right information about the intention of the test case. For example, to open browser, the keyword
 used is “Open Browser”.
 Create logs and take screenshots itself
+
+DISADVANTAGES
+Robot Framework scripts are hard to maintain.​
+
+Robot Framework HTML reports are difficult to customize.​
+
+Robot Framework does not support parallel test execution.​
+
+Some Robot Framework errors are difficult to debug.​
+
+Robot Framework has strict indentation rules.
 
 
 TO SETUP ROBOT FRAMEWORK
