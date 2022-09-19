@@ -1,6 +1,9 @@
 *** Settings ***
 Library  SeleniumLibrary
 Variables  ../PageObjects/Locators.py
+Resource    ../Resources/DeleteKeywords.robot
+Resource    ../TestCases/AddCustomers.robot
+Variables  ../TestData/Data.py
 
 *** Keywords ***
 

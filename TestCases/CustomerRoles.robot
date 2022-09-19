@@ -5,7 +5,7 @@ Resource    ../Resources/LoginKeywords.robot
 Resource    ../Resources/CustomerRolesKeyword.robot
 Resource    ../Resources/DeleteKeywords.robot
 Resource    ../TestCases/AddCustomers.robot
-Variables  ../PageObjects/Data.py
+Variables  ../TestData/Data.py
 Variables  ../PageObjects/Locators.py
 
 *** Variables ***

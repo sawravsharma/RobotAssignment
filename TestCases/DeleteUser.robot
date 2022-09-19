@@ -4,7 +4,7 @@ Resource    ../Resources/AddCustomersKeywords.robot
 Resource    ../Resources/LoginKeywords.robot
 Resource    ../Resources/DeleteKeywords.robot
 Resource    ../TestCases/AddCustomers.robot
-Variables  ../PageObjects/Data.py
+Variables  ../TestData/Data.py
 
 *** Variables ***
 #${Browser}    headlessfirefox
