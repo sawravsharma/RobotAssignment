@@ -1,0 +1,19 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.AddCustomers                                                           
+==============================================================================
+Adding New User :: This Test case is adding the user                  0
+lHLSN@gmail.com
+YQApnWxjmG
+DyaPT
+UO
+| PASS |
+------------------------------------------------------------------------------
+Suites.AddCustomers                                                   | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\Results\pabot_results\0\output.xml

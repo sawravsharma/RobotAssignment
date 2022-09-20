@@ -1,0 +1,24 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.AddCustomers                                                           
+==============================================================================
+Adding New User :: This Test case is adding the user                    
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot:19
+    T:  Adding New User    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot:24
+      Select From List By Value    xpath://select[@name='customers-grid_length']    100
+______________________________________________________________________________
+| FAIL |
+List with locator 'xpath://select[@name='customers-grid_length']' not found.
+------------------------------------------------------------------------------
+Suites.AddCustomers                                                   | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\ResultsRanThroughBatFile\pabot_results\0\output.xml

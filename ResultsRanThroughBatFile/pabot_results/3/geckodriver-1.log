@@ -1,0 +1,16 @@
+1663678069957	geckodriver	INFO	Listening on 127.0.0.1:54086
+1663678073040	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "54087" "-no-remote" "-profile" "C:\\Users\\SAURAV~1\\AppData\\Local\\Temp\\rust_mozprofileVVgl5A"
+1663678073919	Marionette	INFO	Marionette enabled
+1663678073926	Marionette	INFO	Listening on port 54120
+WebDriver BiDi listening on ws://localhost:54087
+1663678074346	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\SAURAV~1\\AppData\\Local\\Temp\\rust_mozprofileVVgl5A\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54087/devtools/browser/7a0c925c-26dc-49e2-8b0d-789cebe717e3
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://admin-demo.nopcommerce.com."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://admin-demo.nopcommerce.com."
+1663678116828	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1663678120335	Marionette	INFO	Stopped listening on port 54120

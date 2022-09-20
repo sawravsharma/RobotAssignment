@@ -1,0 +1,8 @@
+datasources:d991fa30dd6dbab73af4b4eab6adaf1f6893e09c
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:7c2fadeb1c1c8cce5018ede721e85a4ee2e9ed98
+--suite Suites.AddCustomers
+--suite Suites.CustomerRoles
+--suite Suites.DeleteUser
+--suite Suites.LogIn

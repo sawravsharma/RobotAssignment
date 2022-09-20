@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 5.0 (Python 3.10.2 on win32)" generated="20220920 18:05:24.818" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="AddCustomers" source="C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot">
+<test id="s1-s1-t1" name="Adding New User" line="19">
+<kw name="Valid Login">
+<arg>${userEmailLogin}</arg>
+<arg>${userPasswordLogin}</arg>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220920 18:02:44.518" endtime="20220920 18:02:44.519"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220920 18:02:44.520" level="INFO">Opening browser 'ff' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<msg timestamp="20220920 18:02:44.523" level="INFO">Firefox driver log is always forced to to: C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\Results\pabot_results\0\geckodriver-1.log</msg>
+<status status="PASS" starttime="20220920 18:02:44.519" endtime="20220920 18:02:59.292"/>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginUserName}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:02:59.299" level="INFO">Typing text 'admin@yourstore.com' into text field 'xpath://input[@id='Email']'.</msg>
+<status status="PASS" starttime="20220920 18:02:59.296" endtime="20220920 18:03:05.494"/>
+</kw>
+<status status="PASS" starttime="20220920 18:02:59.294" endtime="20220920 18:03:05.495"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:05.500" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='Password']'.</msg>
+<status status="PASS" starttime="20220920 18:03:05.498" endtime="20220920 18:03:11.617"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:05.496" endtime="20220920 18:03:11.617"/>
+</kw>
+<kw name="Click SignIn" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:11.618" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220920 18:03:11.618" endtime="20220920 18:03:23.606"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:11.617" endtime="20220920 18:03:23.606"/>
+</kw>
+<status status="PASS" starttime="20220920 18:02:44.517" endtime="20220920 18:03:23.607"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnCustomers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:23.608" level="INFO">Clicking element '//a[@href='#']//p[contains(text(),'Customers')]'.</msg>
+<status status="PASS" starttime="20220920 18:03:23.607" endtime="20220920 18:03:28.251"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnCustomers1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:28.254" level="INFO">Clicking element '//a[@href='/Admin/Customer/List']//p[contains(text(),'Customers')]'.</msg>
+<status status="PASS" starttime="20220920 18:03:28.252" endtime="20220920 18:03:33.472"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath://select[@name='customers-grid_length']</arg>
+<arg>100</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220920 18:03:33.475" level="INFO">Selecting options from selection list 'xpath://select[@name='customers-grid_length']' by value 100.</msg>
+<status status="PASS" starttime="20220920 18:03:33.473" endtime="20220920 18:03:47.877"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220920 18:03:47.877" endtime="20220920 18:03:49.883"/>
+</kw>
+<kw name="Enter EmailOfUserWhomeYouHaveToDelete" library="DeleteKeywords">
+<arg>${SearchingUser}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputEmailofUser}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:49.884" level="INFO">Typing text 'lHLSN@gmail.com' into text field '//input[@name='SearchEmail']'.</msg>
+<status status="PASS" starttime="20220920 18:03:49.884" endtime="20220920 18:03:55.959"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:49.883" endtime="20220920 18:03:55.961"/>
+</kw>
+<kw name="Click SearchButton" library="DeleteKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${searchButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:55.966" level="INFO">Clicking button '//button[@id='search-customers']'.</msg>
+<status status="PASS" starttime="20220920 18:03:55.964" endtime="20220920 18:04:06.822"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:55.962" endtime="20220920 18:04:06.822"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${usersCount}</var>
+<arg>//a[contains(text(),'Edit')]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220920 18:04:13.843" level="INFO">${usersCount} = 0</msg>
+<status status="PASS" starttime="20220920 18:04:06.823" endtime="20220920 18:04:13.843"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${usersCount}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220920 18:04:13.844" endtime="20220920 18:04:13.845"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${usersCount} == 0</arg>
+<arg>Adding The User</arg>
+<arg>ELSE IF</arg>
+<arg>${usersCount} &gt;= 1</arg>
+<arg>Deleting The User</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Adding The User">
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>10</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220920 18:04:13.847" endtime="20220920 18:04:15.865"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnAddNew}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220920 18:04:15.866" level="INFO">Clicking element '//a[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20220920 18:04:15.865" endtime="20220920 18:04:20.978"/>
+</kw>
+<kw name="Enter UserEmail" library="AddCustomersKeywords">
+<arg>${EMAIL}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputEmail}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:04:20.988" level="INFO">Typing text 'lHLSN@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20220920 18:04:20.985" endtime="20220920 18:04:27.119"/>
+</kw>
+<status status="PASS" starttime="20220920 18:04:20.981" endtime="20220920 18:04:27.121"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMAIL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220920 18:04:27.122" endtime="20220920 18:04:27.123"/>
+</kw>
+<kw name="Enter NewUserPassword" library="AddCustomersKeywords">
+<arg>${PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputPassword}</arg>
+<arg>${NewUserpassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:04:27.128" level="INFO">Typing text 'YQApnWxjmG' into text field 'name:Password'.</msg>
+<status status="PASS" starttime="20220920 18:04:27.126" endtime="20220920 18:04:33.296"/>
+</kw>
+<status status="PASS" starttime="20220920 18:04:27.124" endtime="20220920 18:04:33.297"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${PASSWORD}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220920 18:04:33.298" endtime="20220920 18:04:33.300"/>
+</kw>
+<kw name="Enter UserFirstName" library="AddCustomersKeywords">
+<arg>${FIRST_NAME}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputFirstName}</arg>
+<arg>${EnterFirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:04:33.306" level="INFO">Typing text 'DyaPT' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20220920 18:04:33.303" endtime="20220920 18:04:39.408"/>
+</kw>
+<status status="PASS" starttime="20220920 18:04:33.301" endtime="20220920 18:04:39.410"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${FIRST_NAME}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220920 18:04:39.410" endtime="20220920 18:04:39.411"/>
+</kw>
+<kw name="Enter UserLastName" library="AddCustomersKeywords">
+<arg>${LAST_NAME}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputLastName}</arg>
+<arg>${EnterLastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:04:39.413" level="INFO">Typing text 'UO' into text field 'name:LastName'.</msg>
+<status status="PASS" starttime="20220920 18:04:39.412" endtime="20220920 18:04:45.501"/>
+</kw>
+<status status="PASS" starttime="20220920 18:04:39.411" endtime="20220920 18:04:45.501"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${LAST_NAME}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220920 18:04:45.501" endtime="20220920 18:04:45.502"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20220920 18:04:45.503" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20220920 18:04:45.502" endtime="20220920 18:04:52.262"/>
+</kw>
+<kw name="Enter UserDOB" library="AddCustomersKeywords">
+<arg>${DATE}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputDOB}</arg>
+<arg>${EnterDOB}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:04:52.263" level="INFO">Typing text '11/10/2021' into text field 'id:DateOfBirth'.</msg>
+<status status="PASS" starttime="20220920 18:04:52.262" endtime="20220920 18:04:58.354"/>
+</kw>
+<status status="PASS" starttime="20220920 18:04:52.262" endtime="20220920 18:04:58.355"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${saveButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220920 18:04:58.359" level="INFO">Clicking button '//button[@name='save']'.</msg>
+<status status="PASS" starttime="20220920 18:04:58.356" endtime="20220920 18:05:09.874"/>
+</kw>
+<kw name="Verify Succesfully User Created" library="AddCustomersKeywords">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>The new customer has been added successfully.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220920 18:05:13.901" level="INFO">Current page contains text 'The new customer has been added successfully.'.</msg>
+<status status="PASS" starttime="20220920 18:05:09.876" endtime="20220920 18:05:13.901"/>
+</kw>
+<status status="PASS" starttime="20220920 18:05:09.875" endtime="20220920 18:05:13.902"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>ScreenShots/AddedUser.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220920 18:05:15.991" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="ScreenShots/AddedUser.png"&gt;&lt;img src="ScreenShots/AddedUser.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220920 18:05:13.902" endtime="20220920 18:05:15.992"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logoutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220920 18:05:15.993" level="INFO">Clicking element 'xpath://a[contains(text(),'Logout')]'.</msg>
+<status status="PASS" starttime="20220920 18:05:15.992" endtime="20220920 18:05:21.845"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220920 18:05:21.846" endtime="20220920 18:05:24.356"/>
+</kw>
+<status status="PASS" starttime="20220920 18:04:13.846" endtime="20220920 18:05:24.357"/>
+</kw>
+<status status="PASS" starttime="20220920 18:04:13.845" endtime="20220920 18:05:24.357"/>
+</kw>
+<doc>This Test case is adding the user</doc>
+<status status="PASS" starttime="20220920 18:02:44.515" endtime="20220920 18:05:24.358"/>
+</test>
+<status status="PASS" starttime="20220920 18:02:44.081" endtime="20220920 18:05:24.362"/>
+</suite>
+<suite id="s1-s2" name="CustomerRoles" source="C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\CustomerRoles.robot">
+<test id="s1-s2-t1" name="Customer Roles" line="17">
+<kw name="Valid Login">
+<arg>${userEmailLogin}</arg>
+<arg>${userPasswordLogin}</arg>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220920 18:02:44.476" endtime="20220920 18:02:44.476"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220920 18:02:44.478" level="INFO">Opening browser 'ff' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<msg timestamp="20220920 18:02:44.482" level="INFO">Firefox driver log is always forced to to: C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\Results\pabot_results\1\geckodriver-1.log</msg>
+<status status="PASS" starttime="20220920 18:02:44.477" endtime="20220920 18:02:59.153"/>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginUserName}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:02:59.156" level="INFO">Typing text 'admin@yourstore.com' into text field 'xpath://input[@id='Email']'.</msg>
+<status status="PASS" starttime="20220920 18:02:59.154" endtime="20220920 18:03:05.247"/>
+</kw>
+<status status="PASS" starttime="20220920 18:02:59.153" endtime="20220920 18:03:05.247"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:05.248" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='Password']'.</msg>
+<status status="PASS" starttime="20220920 18:03:05.248" endtime="20220920 18:03:11.307"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:05.247" endtime="20220920 18:03:11.307"/>
+</kw>
+<kw name="Click SignIn" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:11.308" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220920 18:03:11.308" endtime="20220920 18:03:24.268"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:11.307" endtime="20220920 18:03:24.268"/>
+</kw>
+<status status="PASS" starttime="20220920 18:02:44.475" endtime="20220920 18:03:24.268"/>
+</kw>
+<kw name="Click Customers" library="CustomerRolesKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnCustomers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:24.269" level="INFO">Clicking element '//a[@href='#']//p[contains(text(),'Customers')]'.</msg>
+<status status="PASS" starttime="20220920 18:03:24.269" endtime="20220920 18:03:29.005"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:24.269" endtime="20220920 18:03:29.006"/>
+</kw>
+<kw name="Click Customers Role" library="CustomerRolesKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnCustomerRoles}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:29.010" level="INFO">Clicking element '//a[@href='/Admin/CustomerRole/List']//p[contains(text(),' Customer roles')]'.</msg>
+<status status="PASS" starttime="20220920 18:03:29.008" endtime="20220920 18:03:34.616"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:29.007" endtime="20220920 18:03:34.618"/>
+</kw>
+<kw name="Click On Create Button In Customer Roles" library="CustomerRolesKeyword">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${createButtonCustomerRoles}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:34.621" level="INFO">Clicking element 'xpath://a[@href='/Admin/CustomerRole/Create']'.</msg>
+<status status="PASS" starttime="20220920 18:03:34.620" endtime="20220920 18:03:40.377"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:34.618" endtime="20220920 18:03:40.379"/>
+</kw>
+<kw name="Enter User Name In Customer Roles" library="CustomerRolesKeyword">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtName}</arg>
+<arg>${FIRST_NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:40.384" level="INFO">Typing text 'iSbEk' into text field '//input[@name='Name']'.</msg>
+<status status="PASS" starttime="20220920 18:03:40.382" endtime="20220920 18:03:46.479"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${FIRST_NAME}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220920 18:03:46.480" endtime="20220920 18:03:46.481"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:40.380" endtime="20220920 18:03:46.481"/>
+</kw>
+<kw name="Select Checkbox Exempt Tax" library="CustomerRolesKeyword">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>${checkboxTax}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:46.482" level="INFO">Selecting checkbox '//input[@id='TaxExempt']'.</msg>
+<status status="PASS" starttime="20220920 18:03:46.482" endtime="20220920 18:03:57.633"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:46.481" endtime="20220920 18:03:57.634"/>
+</kw>
+<kw name="Click On Choose Product Button" library="CustomerRolesKeyword">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btnChooseProduct}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:57.638" level="INFO">Clicking button '//button[contains(text(),'Choose a product')]'.</msg>
+<status status="PASS" starttime="20220920 18:03:57.637" endtime="20220920 18:04:08.447"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:57.635" endtime="20220920 18:04:08.448"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>title:Choose a product / nopCommerce administration</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220920 18:04:08.449" endtime="20220920 18:04:34.670"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20220920 18:04:34.672" endtime="20220920 18:04:36.693"/>
+</kw>
+<kw name="Click On Select button" library="CustomerRolesKeyword">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${selectProduct}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220920 18:04:36.698" level="INFO">Clicking button '(//button[contains(text(),'Select')])[1]'.</msg>
+<status status="PASS" starttime="20220920 18:04:36.696" endtime="20220920 18:04:47.748"/>
+</kw>
+<status status="PASS" starttime="20220920 18:04:36.694" endtime="20220920 18:04:47.750"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>title:Add a new customer role / nopCommerce administration</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20220920 18:04:47.752" endtime="20220920 18:04:59.856"/>
+</kw>
+<kw name="Click On Save Button In Customer Roles" library="CustomerRolesKeyword">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${saveButtonInCustomerRoles}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220920 18:04:59.861" level="INFO">Clicking button 'xpath://button[@name='save']'.</msg>
+<status status="PASS" starttime="20220920 18:04:59.859" endtime="20220920 18:05:11.385"/>
+</kw>
+<status status="PASS" starttime="20220920 18:04:59.857" endtime="20220920 18:05:11.385"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>The new customer role has been added successfully.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220920 18:05:15.412" level="INFO">Current page contains text 'The new customer role has been added successfully.'.</msg>
+<status status="PASS" starttime="20220920 18:05:11.385" endtime="20220920 18:05:15.412"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>ScreenShots/CustomerRole.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220920 18:05:17.485" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="ScreenShots/CustomerRole.png"&gt;&lt;img src="ScreenShots/CustomerRole.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220920 18:05:15.413" endtime="20220920 18:05:17.486"/>
+</kw>
+<doc>This Test case is giving the role to the added user</doc>
+<status status="PASS" starttime="20220920 18:02:44.473" endtime="20220920 18:05:17.487"/>
+</test>
+<status status="PASS" starttime="20220920 18:02:44.051" endtime="20220920 18:05:17.490"/>
+</suite>
+<suite id="s1-s3" name="DeleteUser" source="C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\DeleteUser.robot">
+<test id="s1-s3-t1" name="Delete the user" line="15">
+<kw name="Valid Login">
+<arg>${userEmailLogin}</arg>
+<arg>${userPasswordLogin}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220920 18:02:44.449" level="INFO">Opening browser 'ff' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<msg timestamp="20220920 18:02:44.450" level="INFO">Firefox driver log is always forced to to: C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\Results\pabot_results\2\geckodriver-1.log</msg>
+<status status="PASS" starttime="20220920 18:02:44.448" endtime="20220920 18:02:57.130"/>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginUserName}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:02:57.133" level="INFO">Typing text 'admin@yourstore.com' into text field 'xpath://input[@id='Email']'.</msg>
+<status status="PASS" starttime="20220920 18:02:57.131" endtime="20220920 18:02:57.265"/>
+</kw>
+<status status="PASS" starttime="20220920 18:02:57.130" endtime="20220920 18:02:57.265"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:02:57.268" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='Password']'.</msg>
+<status status="PASS" starttime="20220920 18:02:57.267" endtime="20220920 18:02:57.313"/>
+</kw>
+<status status="PASS" starttime="20220920 18:02:57.266" endtime="20220920 18:02:57.313"/>
+</kw>
+<kw name="Click SignIn" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220920 18:02:57.316" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220920 18:02:57.315" endtime="20220920 18:03:01.473"/>
+</kw>
+<status status="PASS" starttime="20220920 18:02:57.314" endtime="20220920 18:03:01.474"/>
+</kw>
+<status status="PASS" starttime="20220920 18:02:44.441" endtime="20220920 18:03:01.474"/>
+</kw>
+<kw name="Adding New User">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220920 18:03:01.476" endtime="20220920 18:03:01.476"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnCustomers}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:01.477" level="INFO">Clicking element '//a[@href='#']//p[contains(text(),'Customers')]'.</msg>
+<status status="PASS" starttime="20220920 18:03:01.477" endtime="20220920 18:03:05.819"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnCustomers1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:05.820" level="INFO">Clicking element '//a[@href='/Admin/Customer/List']//p[contains(text(),'Customers')]'.</msg>
+<status status="PASS" starttime="20220920 18:03:05.819" endtime="20220920 18:03:10.775"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnAddNew}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:10.776" level="INFO">Clicking element '//a[@class='btn btn-primary']'.</msg>
+<status status="PASS" starttime="20220920 18:03:10.775" endtime="20220920 18:03:15.757"/>
+</kw>
+<kw name="Enter UserEmail" library="AddCustomersKeywords">
+<arg>${EMAIL}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputEmail}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:15.773" level="INFO">Typing text 'vfidv@gmail.com' into text field 'id:Email'.</msg>
+<status status="PASS" starttime="20220920 18:03:15.765" endtime="20220920 18:03:21.868"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:15.759" endtime="20220920 18:03:21.868"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${EMAIL}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220920 18:03:21.868" endtime="20220920 18:03:21.869"/>
+</kw>
+<kw name="Enter NewUserPassword" library="AddCustomersKeywords">
+<arg>${PASSWORD}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputPassword}</arg>
+<arg>${NewUserpassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:21.870" level="INFO">Typing text 'rHDMJrKJDo' into text field 'name:Password'.</msg>
+<status status="PASS" starttime="20220920 18:03:21.870" endtime="20220920 18:03:27.942"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:21.869" endtime="20220920 18:03:27.943"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${PASSWORD}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220920 18:03:27.944" endtime="20220920 18:03:27.945"/>
+</kw>
+<kw name="Enter UserFirstName" library="AddCustomersKeywords">
+<arg>${FIRST_NAME}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputFirstName}</arg>
+<arg>${EnterFirstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:27.949" level="INFO">Typing text 'JmUoM' into text field 'name:FirstName'.</msg>
+<status status="PASS" starttime="20220920 18:03:27.948" endtime="20220920 18:03:34.028"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:27.946" endtime="20220920 18:03:34.029"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${FIRST_NAME}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220920 18:03:34.030" endtime="20220920 18:03:34.032"/>
+</kw>
+<kw name="Enter UserLastName" library="AddCustomersKeywords">
+<arg>${LAST_NAME}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputLastName}</arg>
+<arg>${EnterLastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:34.036" level="INFO">Typing text 'AN' into text field 'name:LastName'.</msg>
+<status status="PASS" starttime="20220920 18:03:34.035" endtime="20220920 18:03:40.114"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:34.033" endtime="20220920 18:03:40.115"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${LAST_NAME}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220920 18:03:40.117" endtime="20220920 18:03:40.118"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>Gender</arg>
+<arg>M</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20220920 18:03:40.120" level="INFO">Selecting 'M' from radio button 'Gender'.</msg>
+<status status="PASS" starttime="20220920 18:03:40.119" endtime="20220920 18:03:46.870"/>
+</kw>
+<kw name="Enter UserDOB" library="AddCustomersKeywords">
+<arg>${DATE}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${inputDOB}</arg>
+<arg>${EnterDOB}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:46.872" level="INFO">Typing text '11/10/2021' into text field 'id:DateOfBirth'.</msg>
+<status status="PASS" starttime="20220920 18:03:46.871" endtime="20220920 18:03:52.930"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:46.870" endtime="20220920 18:03:52.934"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${saveButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:52.936" level="INFO">Clicking button '//button[@name='save']'.</msg>
+<status status="PASS" starttime="20220920 18:03:52.934" endtime="20220920 18:04:04.415"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:01.475" endtime="20220920 18:04:04.415"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>xpath://select[@name='customers-grid_length']</arg>
+<arg>100</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220920 18:04:04.416" level="INFO">Selecting options from selection list 'xpath://select[@name='customers-grid_length']' by value 100.</msg>
+<msg timestamp="20220920 18:04:08.534" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="2-selenium-screenshot-1.png"&gt;&lt;img src="2-selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220920 18:04:08.540" level="FAIL">List with locator 'xpath://select[@name='customers-grid_length']' not found.</msg>
+<status status="FAIL" starttime="20220920 18:04:04.416" endtime="20220920 18:04:08.570"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" starttime="20220920 18:04:08.570" endtime="20220920 18:04:08.571"/>
+</kw>
+<kw name="Enter EmailOfUserWhomeYouHaveToDelete" library="DeleteKeywords">
+<arg>${EMAIL}</arg>
+<status status="NOT RUN" starttime="20220920 18:04:08.571" endtime="20220920 18:04:08.572"/>
+</kw>
+<kw name="Click SearchButton" library="DeleteKeywords">
+<status status="NOT RUN" starttime="20220920 18:04:08.572" endtime="20220920 18:04:08.572"/>
+</kw>
+<kw name="Click EditButton" library="DeleteKeywords">
+<status status="NOT RUN" starttime="20220920 18:04:08.572" endtime="20220920 18:04:08.573"/>
+</kw>
+<kw name="Click DeleteButton" library="DeleteKeywords">
+<status status="NOT RUN" starttime="20220920 18:04:08.573" endtime="20220920 18:04:08.573"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://div[@class='modal-footer']//button[contains(text(),'Delete')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220920 18:04:08.573" endtime="20220920 18:04:08.574"/>
+</kw>
+<kw name="Verify Succesfully User Deleted" library="DeleteKeywords">
+<status status="NOT RUN" starttime="20220920 18:04:08.574" endtime="20220920 18:04:08.574"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>ScreenShots/DeletedUser.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20220920 18:04:08.575" endtime="20220920 18:04:08.575"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logoutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220920 18:04:08.575" endtime="20220920 18:04:08.575"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="NOT RUN" starttime="20220920 18:04:08.575" endtime="20220920 18:04:08.575"/>
+</kw>
+<doc>This Test case is deleting the added user</doc>
+<status status="FAIL" starttime="20220920 18:02:44.441" endtime="20220920 18:04:08.576">List with locator 'xpath://select[@name='customers-grid_length']' not found.</status>
+</test>
+<status status="FAIL" starttime="20220920 18:02:44.020" endtime="20220920 18:04:08.577"/>
+</suite>
+<suite id="s1-s4" name="LogIn" source="C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\LogIn.robot">
+<test id="s1-s4-t1" name="LoginTestWithExcelSheet using" line="15">
+<kw name="Valid Login">
+<arg>admin@yourstore.com</arg>
+<arg>admin</arg>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220920 18:02:46.567" endtime="20220920 18:02:46.567"/>
+</kw>
+<kw name="Open My Browser" library="LoginKeywords">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220920 18:02:46.568" level="INFO">Opening browser 'ff' to base url 'https://admin-demo.nopcommerce.com/'.</msg>
+<msg timestamp="20220920 18:02:46.569" level="INFO">Firefox driver log is always forced to to: C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\Results\pabot_results\3\geckodriver-1.log</msg>
+<status status="PASS" starttime="20220920 18:02:46.568" endtime="20220920 18:03:00.246"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220920 18:03:00.248" endtime="20220920 18:03:02.270"/>
+</kw>
+<status status="PASS" starttime="20220920 18:02:46.567" endtime="20220920 18:03:02.271"/>
+</kw>
+<kw name="Enter UserName" library="LoginKeywords">
+<arg>${username}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginUserName}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:02.279" level="INFO">Typing text 'admin@yourstore.com' into text field 'xpath://input[@id='Email']'.</msg>
+<status status="PASS" starttime="20220920 18:03:02.276" endtime="20220920 18:03:08.496"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:02.272" endtime="20220920 18:03:08.496"/>
+</kw>
+<kw name="Enter Password" library="LoginKeywords">
+<arg>${password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${loginPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:08.499" level="INFO">Typing text 'admin' into text field 'xpath://input[@id='Password']'.</msg>
+<status status="PASS" starttime="20220920 18:03:08.498" endtime="20220920 18:03:14.609"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:08.497" endtime="20220920 18:03:14.610"/>
+</kw>
+<kw name="Click SignIn" library="LoginKeywords">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:14.612" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220920 18:03:14.611" endtime="20220920 18:03:26.645"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:14.610" endtime="20220920 18:03:26.645"/>
+</kw>
+<kw name="Verify Succesfull login" library="LoginKeywords">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Dashboard / nopCommerce administration</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220920 18:03:28.651" level="INFO">Page title is 'Dashboard / nopCommerce administration'.</msg>
+<status status="PASS" starttime="20220920 18:03:26.647" endtime="20220920 18:03:28.652"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:26.646" endtime="20220920 18:03:28.653"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>ScreenShots/AfterLogin.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220920 18:03:30.754" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="ScreenShots/AfterLogin.png"&gt;&lt;img src="ScreenShots/AfterLogin.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220920 18:03:28.654" endtime="20220920 18:03:30.755"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logoutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220920 18:03:30.756" level="INFO">Clicking element 'xpath://a[contains(text(),'Logout')]'.</msg>
+<status status="PASS" starttime="20220920 18:03:30.755" endtime="20220920 18:03:36.727"/>
+</kw>
+<kw name="Close My Browser" library="LoginKeywords">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220920 18:03:36.731" endtime="20220920 18:03:39.599"/>
+</kw>
+<status status="PASS" starttime="20220920 18:03:36.729" endtime="20220920 18:03:39.600"/>
+</kw>
+<status status="PASS" starttime="20220920 18:02:46.566" endtime="20220920 18:03:39.601"/>
+</kw>
+<status status="PASS" starttime="20220920 18:02:46.564" endtime="20220920 18:03:39.602"/>
+</test>
+<status status="PASS" starttime="20220920 18:02:44.035" endtime="20220920 18:03:39.605"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 4 executions.</doc>
+<status status="FAIL" starttime="20220920 18:02:43.996" endtime="20220920 18:05:24.369"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="AddCustomers">Suites.AddCustomers</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="CustomerRoles">Suites.CustomerRoles</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s3" name="DeleteUser">Suites.DeleteUser</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="LogIn">Suites.LogIn</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220920 18:02:44.467" level="WARN">Imported library 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestData\Data.py' contains no keywords.</msg>
+<msg timestamp="20220920 18:02:44.506" level="ERROR">Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\Resources\DeleteKeywords.robot' on line 5: Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot' on line 18: Resource file with 'Test Cases' section is invalid.</msg>
+<msg timestamp="20220920 18:02:44.512" level="ERROR">Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot' on line 9: Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot' on line 18: Resource file with 'Test Cases' section is invalid.</msg>
+<msg timestamp="20220920 18:02:44.465" level="ERROR">Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\Resources\DeleteKeywords.robot' on line 5: Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot' on line 18: Resource file with 'Test Cases' section is invalid.</msg>
+<msg timestamp="20220920 18:02:44.470" level="ERROR">Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\CustomerRoles.robot' on line 7: Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot' on line 18: Resource file with 'Test Cases' section is invalid.</msg>
+<msg timestamp="20220920 18:02:44.431" level="ERROR">Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\Resources\DeleteKeywords.robot' on line 5: Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot' on line 18: Resource file with 'Test Cases' section is invalid.</msg>
+<msg timestamp="20220920 18:02:44.441" level="ERROR">Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\DeleteUser.robot' on line 6: Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot' on line 18: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>

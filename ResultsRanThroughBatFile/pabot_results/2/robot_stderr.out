@@ -1,0 +1,2 @@
+[ ERROR ] Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\Resources\DeleteKeywords.robot' on line 5: Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot' on line 18: Resource file with 'Test Cases' section is invalid.
+[ ERROR ] Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\DeleteUser.robot' on line 6: Error in file 'C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\AddCustomers.robot' on line 18: Resource file with 'Test Cases' section is invalid.

@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Resource    ../Resources/LoginKeywords.robot
 Variables  ../TestData/Data.py
+Variables    ../UserKeywords/Custom_Lib.py
 Library    DataDriver  ../TestData/Login.xlsx  sheet_name=Sheet1
 
 Test Template    Valid Login

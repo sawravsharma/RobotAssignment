@@ -1,0 +1,28 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.DeleteUser                                                             
+==============================================================================
+Delete the user :: This Test case is deleting the added user          vfidv@gmail.com
+rHDMJrKJDo
+JmUoM
+AN
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\DeleteUser.robot:15
+    T:  Delete the user    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\DeleteUser.robot:19
+      Select From List By Value    xpath://select[@name='customers-grid_length']    100
+______________________________________________________________________________
+| FAIL |
+List with locator 'xpath://select[@name='customers-grid_length']' not found.
+------------------------------------------------------------------------------
+Suites.DeleteUser                                                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\Results\pabot_results\2\output.xml

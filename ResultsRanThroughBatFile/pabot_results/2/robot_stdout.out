@@ -1,0 +1,28 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.DeleteUser                                                             
+==============================================================================
+Delete the user :: This Test case is deleting the added user            
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\DeleteUser.robot:15
+    T:  Delete the user    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\DeleteUser.robot:18
+      Adding New User    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\TestCases\DeleteUser.robot:41
+      Click Element    ${btnCustomers}
+      |  ${btnCustomers} = //a[@href='#']//p[contains(text(),'Customers')] (str)
+______________________________________________________________________________
+| FAIL |
+Element with locator '//a[@href='#']//p[contains(text(),'Customers')]' not found.
+------------------------------------------------------------------------------
+Suites.DeleteUser                                                     | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\SauravSharma\PycharmProjects\RobotFrameworkPOM\ResultsRanThroughBatFile\pabot_results\2\output.xml
